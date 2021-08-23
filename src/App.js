@@ -1,12 +1,12 @@
+import React, { createContext, useState } from 'react'
 import firebase from 'firebase'
 import firebaseConfig from './config'
 import 'react-bootstrap'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Header from './components/Header'
-import Home from './pages/Home'
-import Login from './components/Login'
-import Signup from './components/Signup'
-import React, { createContext, useState } from 'react'
+import Header from '../src/components/Header'
+import Home from '../src/pages/Home'
+import Login from '../src/components/Login'
+import Signup from '../src/components/Signup'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -24,14 +24,11 @@ export default function App() {
       <AuthContext.Provider value={{ user, setUser, fbAuth, firebase }}>
         <Header />
         <Switch>
-          <Home />
-          <Route path="/login" component={Login}>
-            <Login />
-          </Route>
-          <Route path="/signup" component={Signup}>
-            <Signup />
-          </Route>
-          <Route path="/" component={Home}></Route>
+          <Route path="/login" component={Login} />
+
+          <Route path="/signup" component={Signup} />
+
+          <Route path="/" component={Home} />
         </Switch>
       </AuthContext.Provider>
     </Router>

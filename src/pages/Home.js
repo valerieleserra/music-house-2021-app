@@ -1,8 +1,12 @@
+import {Button} from 'react-bootstrap'
+
+
 export default function Home() {
-    return(
-        <div className='home-cont'>
-            <h1 className='home-text'>  </h1>
-            
-        </div>
-    )
+  return (
+    <>
+      <h1>These are my bookings!</h1>
+      <input type="date" value="2017-06-01"></input>
+      <Button>Book</Button>
+    </>
+  )
 }

@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react'
 import { AuthContext } from '../App'
 import React from 'react'
-import { Form, Button, Modal } from 'react-bootstrap'
+import { Button, Modal, Form } from 'react-bootstrap'
 import firebase from 'firebase'
 
 export default function Signup() {
@@ -48,6 +48,7 @@ export default function Signup() {
 
   return (
     <>
+
       {!user && (
         <Button variant='light' onClick={handleShow}>Sign in</Button>
       )}
@@ -83,7 +84,7 @@ export default function Signup() {
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
                 type="text"
-                placeholder="Enter your project or stage name here."
+                placeholder="Enter your project or stage name"
               />
             </Form.Group>
             &nbsp;
