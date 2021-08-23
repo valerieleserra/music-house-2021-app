@@ -1,6 +1,5 @@
-import { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { AuthContext } from '../App'
-import React from 'react'
 import { Form, Button, Container } from 'react-bootstrap'
 import firebase from 'firebase'
 

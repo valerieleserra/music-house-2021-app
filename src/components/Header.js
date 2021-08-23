@@ -6,10 +6,12 @@ export default function Header() {
         <>
         <Navbar className="navbar" bg="light" variant="light">
           
-          <Navbar.Brand href="/home">Music House</Navbar.Brand>
+          <Navbar.Brand to="/home">Music House</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/"></Nav.Link>
-            <Nav.Link href="/profile">My Profile</Nav.Link> 
+            <Nav.Link to="/profile">My Profile</Nav.Link> 
+            <Nav.Link to="/login">Login</Nav.Link> 
+            <Nav.Link to="/signup">Sign Up</Nav.Link> 
+            <Nav.Link to="/bookings">Book Now</Nav.Link> 
           </Nav>
         </Navbar>
       </>

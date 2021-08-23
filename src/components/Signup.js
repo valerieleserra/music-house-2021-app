@@ -77,6 +77,16 @@ export default function Signup() {
               />
             </Form.Group>
             &nbsp;
+            <Form.Group className="mb-3" controlId="formProjectName">
+              <Form.Label>Project Name</Form.Label>
+              <Form.Control
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                type="text"
+                placeholder="Enter your project or stage name here."
+              />
+            </Form.Group>
+            &nbsp;
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control
