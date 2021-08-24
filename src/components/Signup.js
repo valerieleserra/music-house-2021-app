@@ -9,8 +9,9 @@ export default function Signup() {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [password, setPassword] = useState('')
+  const [projectName, setProjectName] = useState('')
   const [email, setEmail] = useState('')
-
+  
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
@@ -22,6 +23,7 @@ export default function Signup() {
       firstName: firstName,
       lastName: lastName,
       password: password,
+      projectName: projectName,
       email: email,
     }
     fetch('https://localhost:5000/users', {
@@ -32,6 +34,7 @@ export default function Signup() {
       .then((response) => response.json())
       .then((json) => console.log('json -->', json))
       .catch((error) => alert(error))
+      console.log('not signing up')
   }
   function signUpAuth(e) {
     firebase
@@ -40,6 +43,7 @@ export default function Signup() {
       .then((res) => {
         const item = JSON.stringify(res.user)
         localStorage.setItem('user', item)
+        console.log(item)
         setUser(res.user)
         newUser(res.user.uid)
       })
@@ -50,12 +54,13 @@ export default function Signup() {
     <>
 
       {!user && (
-        <Button variant='light' onClick={handleShow}>Sign in</Button>
+        <Button variant='light' onClick={handleShow}>Sign Up</Button>
       )}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Sign Up</Modal.Title>
         </Modal.Header>
+
         <Modal.Body>
           <Form onSubmit={(e) => signUpAuth(e)}>
             <Form.Group className="mb-3" controlId="formFirstName">
@@ -79,10 +84,10 @@ export default function Signup() {
             </Form.Group>
             &nbsp;
             <Form.Group className="mb-3" controlId="formProjectName">
-              <Form.Label>Project Name</Form.Label>
+              <Form.Label>Project Name or Stage Name</Form.Label>
               <Form.Control
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
+                value={projectName}
+                onChange={(e) => setProjectName(e.target.value)}
                 type="text"
                 placeholder="Enter your project or stage name"
               />

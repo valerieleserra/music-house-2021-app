@@ -1,6 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
 body {
     background-color: greenyellow;
     background-position: center center;
     background-size: cover;
     min-height: 100vh;
   }
+
+  .navbar{
+    font-size: 15px;
+  }
+
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+  }
+
+  .navbar .links {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 100px;
+}
+
+.landing {
+  background: url('../src/assets/image-1.jpeg') no-repeat center/cover;
+  height: 600px;
+}
+
+.landing .overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  color: white;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.landing .overlay h1 {
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+.about {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about h3 {
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+.about .about-items div{
+  background-color: #f1f1f1;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.about .about-items div h4 {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+.about .about-items div p{
+  line-height: 1.8;
+}
+
+@media (min-width: 768px){
+  .about .overlay h1 {
+    font-size: 64px;
+  }
+
+.about .overlay p {
+  font-size: 22px;
+}
+.grid .grid-items {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px
+}
+}

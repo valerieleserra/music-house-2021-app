@@ -1,12 +1,21 @@
-import {Button} from 'react-bootstrap'
+
 
 
 export default function Home() {
   return (
     <>
-      <h1>These are my bookings!</h1>
-      <input type="date" value="2017-06-01"></input>
-      <Button>Book</Button>
+      <section className='landing'>
+        <div className='overlay'>
+          <h1>Welcome Home</h1>
+          <p>Book your next session with us!</p>
+        </div>
+      </section>
+   
     </>
   )
 }
+
+
+{/* <h1>These are my Home</h1>
+<input onChange={(e) => setBooking(e.target.value)} type="date" value="2021-08-21"></input>
+<Button>Book</Button>*/}
