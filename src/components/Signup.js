@@ -1,50 +1,52 @@
 import { useContext, useState } from 'react'
-import { AuthContext } from '../App'
+import { userContext } from '../App'
 import React from 'react'
 import { Button, Modal, Form } from 'react-bootstrap'
 import firebase from 'firebase'
 
 export default function Signup() {
-  const { user, setUser } = useContext(AuthContext)
+  const { user, setUser } = useContext(userContext)
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [password, setPassword] = useState('')
   const [projectName, setProjectName] = useState('')
   const [email, setEmail] = useState('')
-  
+
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
-  const newUser = (e) => {
-    console.log('Signing up user!')
+  const newUser = (uid) => {
     const user = {
       firstName: firstName,
       lastName: lastName,
-      password: password,
-      projectName: projectName,
+      project: projectName,
       email: email,
+      password: password,
+      uid,
     }
-    fetch('https://localhost:5000/users', {
+    fetch('http://localhost:5000/users', {
       method: 'POST',
+      headers: { 'Content-type': 'application/json' },
       body: JSON.stringify(user),
-      headers: { 'Content-type': 'application/json; charset=UTF-8' },
     })
       .then((response) => response.json())
-      .then((json) => console.log('json -->', json))
+      .then((data) => {
+        console.log(data)
+        setUser(data)
+      })
       .catch((error) => alert(error))
-      console.log('not signing up')
   }
-  function signUpAuth(e) {
+  function signUpAuth(event) {
+    event.preventDefault()
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((res) => {
-        const item = JSON.stringify(res.user)
-        localStorage.setItem('user', item)
-        console.log(item)
-        setUser(res.user)
+        const json = JSON.stringify(res.user)
+        localStorage.setItem('user', json)
+        console.log(res.user)
         newUser(res.user.uid)
       })
       .catch((error) => alert(error))
@@ -52,15 +54,15 @@ export default function Signup() {
 
   return (
     <>
-
       {!user && (
-        <Button variant='light' onClick={handleShow}>Sign Up</Button>
+        <Button variant="light" onClick={handleShow}>
+          Sign Up
+        </Button>
       )}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Sign Up</Modal.Title>
         </Modal.Header>
-
         <Modal.Body>
           <Form onSubmit={(e) => signUpAuth(e)}>
             <Form.Group className="mb-3" controlId="formFirstName">
@@ -84,7 +86,7 @@ export default function Signup() {
             </Form.Group>
             &nbsp;
             <Form.Group className="mb-3" controlId="formProjectName">
-              <Form.Label>Project Name or Stage Name</Form.Label>
+              <Form.Label>Project Name</Form.Label>
               <Form.Control
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
@@ -113,19 +115,16 @@ export default function Signup() {
               />
             </Form.Group>
             &nbsp;
-            
           </Form>
-
         </Modal.Body>
         <Modal.Footer>
-        <Button
-              variant="primary"
-              type="submit"
-              onSubmit={(e) => signUpAuth(e)}
-              onClick={(e) => window.location.href = '/home'}
-            >
-              Submit
-            </Button>
+          <Button
+            variant="primary"
+            type="submit"
+            onClick={(e) => signUpAuth(e)}
+          >
+            Submit
+          </Button>
         </Modal.Footer>
       </Modal>
     </>

@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react'
-import { AuthContext } from '../App'
+import { userContext } from '../App'
 import { Form, Button, Modal } from 'react-bootstrap'
 import firebase from 'firebase'
 
 export default function Login() {
-  const { user, setUser } = useContext(AuthContext)
+  const { user, setUser } = useContext(userContext)
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
 
