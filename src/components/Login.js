@@ -39,11 +39,11 @@ export default function Login() {
   return (
     <>
       {!user ? (
-        <Button variant="light" onClick={handleShow}>
+        <button onClick={handleShow}>
           Login
-        </Button>
+        </button>
       ) : (
-        <Button variant="light" onClick={logOut}>
+        <Button onClick={logOut}>
           Logout
         </Button>
       )}
@@ -80,7 +80,7 @@ export default function Login() {
             variant="primary"
             type="submit"
             onSubmit={(e) => loginAuth(e)}
-            onClick={(e) => (window.location.href = '/home')}
+            onClick={(e) => (window.location.href = '/memberprofile')}
           >
             Submit
           </Button>

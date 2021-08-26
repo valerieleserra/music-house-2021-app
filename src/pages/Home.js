@@ -1,50 +1,72 @@
-import Button from 'react-bootstrap'
-import image2 from '../assets/image2.jpeg'
-import image4 from '../assets/image4.jpeg'
+import image3 from '../assets/image3.jpeg'
+// import image2 from '../assets/image2.jpeg'
+// import image4 from '../assets/image4.jpeg'
+import { ListGroup, ListGroupItem, Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/Button'
 
 export default function Home() {
+ 
   return (
     <>
       <section className="landing">
         <div className="overlay">
-          <h1>Welcome Home</h1>
-          <p>Book your next session with us!</p>
+          <h1>Welome to South Florida's favorite house of music and art</h1>
+          <Link to='/bookings' >
+            <Button variant='outline-dark' size='lg'  className="booking-btn">Request your next session!</Button>
+            </Link>
         </div>
       </section>
-      <h4>About</h4>
-      <section className="about">
-        <h3> Located in Delray Beach, Florida </h3>
-        <div className="about-items">
-          <div>
-            <img src="" alt="" />
-            <h4>About</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
-              blanditiis minus velit quam exercitationem at minima dolorum
-              obcaecati. Praesentium natus perferendis sint tenetur atque ex rem
-              dicta odit dolor distinctio.
-            </p>
-          </div>
 
-          <div>
-            <img src={image2} alt="" />
-            <h4>Gear</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
-              blanditiis minus velit quam exercitationem at minima dolorum
-              obcaecati. Praesentium natus perferendis sint tenetur atque ex rem
-              dicta odit dolor distinctio.
-            </p>
-          </div>
+<div className="card-container">
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={image3} />
+        <Card.Body>
+          <Card.Title>Available Rooms</Card.Title>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+        </Card.Body>
+        <ListGroup className="list-group-flush">
+          <ListGroupItem>Cras justo odio</ListGroupItem>
+          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
+          <ListGroupItem>Vestibulum at eros</ListGroupItem>
+        </ListGroup>
+      </Card>
 
-          <div>
-            <img src={image4} alt="" />
-            <h4>Upcoming Events</h4>
-            <p>Share and promote your upcoming events once youve joined us!</p>
-          </div>
-          <button>book now</button>
-        </div>
-      </section>
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={image3} />
+        <Card.Body>
+          <Card.Title>Gear</Card.Title>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+        </Card.Body>
+        <ListGroup className="list-group-flush">
+          <ListGroupItem>Cras justo odio</ListGroupItem>
+          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
+          <ListGroupItem>Vestibulum at eros</ListGroupItem>
+        </ListGroup>
+      </Card>
+
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={image3} />
+        <Card.Body>
+          <Card.Title>Upcoming Events</Card.Title>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+        </Card.Body>
+        <ListGroup className="list-group-flush">
+          <ListGroupItem>Cras justo odio</ListGroupItem>
+          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
+          <ListGroupItem>Vestibulum at eros</ListGroupItem>
+        </ListGroup>
+      </Card>
+  </div>
     </>
   )
 }

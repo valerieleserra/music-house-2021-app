@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 img {
@@ -9,23 +12,34 @@ img {
 }
 
 body {
-    background-color: greenyellow;
+    background-color: black;
     background-position: center center;
     background-size: cover;
     min-height: 100vh;
   }
 
-  .navbar{
-    font-size: 15px;
+  .navbar-brand{
+    margin-left: 20px;
   }
 
+  .navbar{
+    font-size: 15px;
+    position: sticky;
+    top: 0;
+    background-color: grey;
+    opacity: 0.5 ;
+    filter:(opacity=50);
+    height: 10vh;
+  }
+/* 
   .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
     background-color: black;
-  }
+    position: sticky;
+  } */
 
   .navbar .links {
     margin: 0 20px;
@@ -35,7 +49,7 @@ body {
 }
 
 .landing {
-  background: url('../src/assets/image-1.jpeg') no-repeat center/cover;
+  background: url('../src/assets/image1.jpeg') no-repeat center/cover;
   height: 600px;
 }
 
@@ -54,47 +68,23 @@ body {
   padding-bottom: 20px;
 }
 
-.about {
-  padding: 50px;
-  display: column;
-  justify-content: space-between;
-}
-
-.about h3 {
-  text-align: center;
-  font-size: 30px;
-  color: #333;
-  padding-bottom: 20px;
-  display:inherit;
-}
-
-.about-items div{
-  background-color: #f1f1f1;
-  margin: 20px 0;
+.list-group-flush {
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
   justify-content: center;
-  
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 
-.about .about-items div h4 {
-  padding: 10px 0;
-  font-size: 22px;
+.booking-btn{
+  background-color: orange;
 }
 
-.about .about-items div p{
-  line-height: 1.8;
-}
-
-@media (min-width: 768px){
-  .about .overlay h1 {
-    font-size: 64px;
-  }
-
-.about .overlay p {
-  font-size: 22px;
-}
-.grid .grid-items {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 30px
-}
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
 }
