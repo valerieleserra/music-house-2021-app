@@ -39,9 +39,9 @@ export default function Login() {
   return (
     <>
       {!user ? (
-        <button onClick={handleShow}>
+        <Button onClick={handleShow}>
           Login
-        </button>
+        </Button>
       ) : (
         <Button onClick={logOut}>
           Logout

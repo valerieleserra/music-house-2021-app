@@ -13,7 +13,7 @@ export default function Home() {
         <div className="overlay">
           <h1>Welome to South Florida's favorite house of music and art</h1>
           <Link to='/bookings' >
-            <Button variant='outline-dark' size='lg'  className="booking-btn">Request your next session!</Button>
+            <Button className="booking-btn" variant='outline-dark' size='lg'>Request your next session!</Button>
             </Link>
         </div>
       </section>
@@ -22,10 +22,9 @@ export default function Home() {
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={image3} />
         <Card.Body>
-          <Card.Title>Available Rooms</Card.Title>
+          <Card.Title>Rates</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Rates available upon request.
           </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
@@ -40,14 +39,13 @@ export default function Home() {
         <Card.Body>
           <Card.Title>Gear</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          Some items listed may only be available on a rental basis for an additional rate. Please contact ahead to reserve.
           </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroupItem>Cras justo odio</ListGroupItem>
-          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-          <ListGroupItem>Vestibulum at eros</ListGroupItem>
+          <ListGroupItem>Consoles</ListGroupItem>
+          <ListGroupItem>Monitors and Amplification</ListGroupItem>
+          <ListGroupItem>Microphones</ListGroupItem>
         </ListGroup>
       </Card>
 
@@ -56,14 +54,13 @@ export default function Home() {
         <Card.Body>
           <Card.Title>Upcoming Events</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+           Let us know of your upcoming events to be promoted!
           </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroupItem>Cras justo odio</ListGroupItem>
-          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-          <ListGroupItem>Vestibulum at eros</ListGroupItem>
+          <ListGroupItem>Tand - Guanabanas 8/28/2021</ListGroupItem>
+          <ListGroupItem>The Heavy Pets - Key Lime House 12/13/2021</ListGroupItem>
+          <ListGroupItem>Umphreys Mcgee - The Fillmore 12/30/2021-1/2/2022</ListGroupItem>
         </ListGroup>
       </Card>
   </div>

@@ -1,11 +1,9 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { userContext } from '../App'
 import { Form, Button, Container } from 'react-bootstrap'
 // import firebase from 'firebase'
 
 export default function Bookings() {
-  const { bookings, setBooking } = useContext(userContext)
   const [email, setEmail] = useState('')
   const [projectName, setProjectName] = useState('')
   const [date, setDate] = useState('')
@@ -13,8 +11,9 @@ export default function Bookings() {
   let history = useHistory()
 
 
-  const newBooking = () => {
-    const bookings = {
+  const newBooking = (e) => {
+    e.preventDefault()
+    const new_booking = {
       email: email,
       project: projectName,
       date: date,
@@ -24,12 +23,10 @@ export default function Bookings() {
     fetch('http://localhost:5000/bookings', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify(bookings),
+      body: JSON.stringify(new_booking),
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data)
-        setBooking(data)
+      .then(() => {
         history.push('/bookingconfirmation')
       })
       .catch((error) => alert(error))
@@ -38,7 +35,7 @@ export default function Bookings() {
   return (
     <>
       <Container className="booking-container">
-        <Form>
+        <Form onSubmit={newBooking}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control
@@ -79,7 +76,7 @@ export default function Bookings() {
             />
           </Form.Group>
           &nbsp;
-          <Button onClick={(e) => newBooking(e)}>Request Booking</Button>
+          <Button onClick={newBooking} htmlType="submit">Request Booking</Button>
         </Form>
       </Container>
     </>

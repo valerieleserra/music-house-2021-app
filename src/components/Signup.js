@@ -55,7 +55,7 @@ export default function Signup() {
   return (
     <>
       {!user && (
-        <Button variant="light" onClick={handleShow}>
+        <Button  onClick={handleShow}>
           Sign Up
         </Button>
       )}

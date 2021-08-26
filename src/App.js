@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from '../src/components/Header'
 import Home from '../src/pages/Home'
 import Bookings from './components/Bookings'
+import Clients from './pages/Clients'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import BookingConfirmation from './pages/BookingConfirmation'
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/bookings" component={Bookings}/>
           <Route path="/bookingconfirmation" component={BookingConfirmation}/>
           <Route exact path="/memberprofile" component={MemberProfile} />
+          <Route exact path="/clients" component={Clients} />
           <Route path="/" component={Home} />
         </Switch>
       </Router>
