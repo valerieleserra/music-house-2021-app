@@ -24,11 +24,11 @@
   font-size: 15px;
   align-items: center;
   justify-content: center;
+  padding: 50px 50px 50px;
 }
 
 .navbar-brand {
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding: 25px 25px 25px;
   font-size: 1.25rem;
   display: flex;
   font-weight: bold;

@@ -10,6 +10,7 @@ import BookingConfirmation from './pages/BookingConfirmation'
 import MemberProfile from './pages/MemberProfile'
 import AboutUs from './pages/AboutUs'
 
+
 import firebase from 'firebase'
 import firebaseConfig from './config'
 

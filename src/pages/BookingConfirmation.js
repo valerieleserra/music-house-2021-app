@@ -6,9 +6,8 @@ export default function BookingConfirmation() {
       <section className="sessionbooked">
         <h1> You're Booked! An agent will contact you shortly.</h1>
         <div className="confirm-img">
-            <div className="confirm-body"></div>
-            <img src={image5} alt="microphone" />
-
+          <div className="confirm-body"></div>
+          <img src={image5} alt="microphone" />
         </div>
       </section>
     </>
