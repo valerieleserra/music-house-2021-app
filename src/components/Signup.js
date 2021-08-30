@@ -26,7 +26,7 @@ export default function Signup() {
       password: password,
       uid,
     }
-    fetch('http://localhost:5000/users', {
+    fetch('https://music-house-api-vl-2.web.app/users', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify(user),

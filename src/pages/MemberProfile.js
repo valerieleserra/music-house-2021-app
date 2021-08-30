@@ -5,7 +5,7 @@ export default function MemberProfile() {
   const [allBookingsWithEmail, setAllBookingsWithEmail] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:5000/bookings`)
+    fetch(`https://music-house-api-vl-2.web.app/bookings`)
       .then((response) => response.json())
       .then((data) => setAllBookingsWithEmail(data))
       .catch((error) => console.log('error', error))

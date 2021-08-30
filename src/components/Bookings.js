@@ -20,7 +20,7 @@ export default function Bookings() {
       time: time,
     }
 
-    fetch('http://localhost:5000/bookings', {
+    fetch('https://music-house-api-vl-2.web.app/bookings', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify(new_booking),
