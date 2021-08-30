@@ -30,6 +30,11 @@ export default function Home() {
             <ListGroupItem>Monitors and Consoles</ListGroupItem>
             <ListGroupItem>Guitar Pedals</ListGroupItem>
             <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
+            <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
+            <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
+            <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
+            <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
+            <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
           </ListGroup>
         </Card>
         <Card style={{ width: '18rem' }}>

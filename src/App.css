@@ -35,11 +35,11 @@
 }
 
 body {
-  background-color: black;
+  background-color: white;
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
-  border: 20px solid rgb(171, 171, 171);
+  border: 20px solid black;
 }
 
 .landing {
@@ -81,6 +81,7 @@ body {
   height: 100%;
   padding: 20px;
   text-align: center;
+  background-color: silver;
 }
 
 .booking-btn {

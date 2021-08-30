@@ -39,7 +39,7 @@ export default function Login() {
   return (
     <>
       {!user ? (
-        <Button onClick={handleShow}>
+        <Button style={{marginLeft: 700}} onClick={handleShow}>
           Login
         </Button>
       ) : (
