@@ -39,7 +39,7 @@ body {
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
-  border: 20px solid black;
+  border: 20px solid rgb(171, 171, 171);
 }
 
 .landing {
@@ -129,8 +129,8 @@ body {
   font-family: 'Roboto', sans-serif;
   justify-content: center;
   display: flex;
-  background: #191970;
-  color: white;
+  background: white;
+  color:black;
 }
 
 .confirm-img {

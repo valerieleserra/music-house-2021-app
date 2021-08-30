@@ -15,7 +15,7 @@ export default function Bookings() {
     e.preventDefault()
     const new_booking = {
       email: email,
-      project: projectName,
+      projectName: projectName,
       date: date,
       time: time,
     }

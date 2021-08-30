@@ -8,7 +8,9 @@ export default function BookingConfirmation() {
         <div className="confirm-img">
           <div className="confirm-body"></div>
           <img src={image5} alt="microphone" />
+
         </div>
+        
       </section>
     </>
   )
