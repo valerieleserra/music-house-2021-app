@@ -16,7 +16,7 @@ export default function MemberProfile() {
       <h1 className="all-bkns-title">All Bookings</h1>
       {allBookingsWithEmail.map((booking) => {
         return (
-          <Container>
+          <Container className='container'>
             <Table responsive="sm" striped bordered hover variant="dark">
               <thead>
                 <tr>

@@ -10,7 +10,7 @@
 /* Navbar */
 .navbar {
   background-color: white;
-  height: 40px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@ body {
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
-  border: 20px solid black;
+  border: 20px solid silver;
 }
 
 .landing {
@@ -94,16 +94,13 @@ body {
 
 .booking-btn:hover {
   background: #2079b0;
-  background-image: -webkit-linear-gradient(top, #bc243c, #e15d44);
-  background-image: -moz-linear-gradient(top, #bc243c, #e15d44);
-  background-image: -ms-linear-gradient(top, #bc243c, #e15d44);
-  background-image: -o-linear-gradient(top, #bc243c, #e15d44);
-  background-image: linear-gradient(to bottom, #bc243c, #e15d44);
+  background-image: -webkit-linear-gradient(top, #E55B13, #E55B13);
   text-decoration: none;
+  opacity: 0.8;
 }
 
 .btn.btn-primary {
-  background-color: black;
+  color: white;
   background-repeat: no-repeat;
   border: none;
   border-radius: 10px;
@@ -115,23 +112,19 @@ body {
   background-color: white !important;
   color: #000;
   outline: none;
-  /* border-color: white; */
+  border-color: white;
   outline: none;
   color: grey !important;
 }
 
-/* .home-signup{
-  outline: none;
-  color: black !important;
-} */
 
-/* Booking confirmation page */
+/* Booking Confirmed */
 .sessionbooked h1 {
   font-family: 'Roboto', sans-serif;
   justify-content: center;
   display: flex;
-  background: white;
-  color:black;
+  background: #EBE2D2;
+  /* color:black; */
 }
 
 .confirm-img {
@@ -140,6 +133,7 @@ body {
   z-index: 999;
   background-color: white;
 }
+
 
 /* About us */
 .about-title {
@@ -167,7 +161,7 @@ body {
   border-radius: 25px;
   background-color: transparent;
   padding: 20px;
-  border: solid grey;
+  border: solid #EBE2D2;
 }
 
 .aboutus-container-h2 {
@@ -175,6 +169,7 @@ body {
   display: flex;
   background-color: white;
   align-items: center;
+  
 }
 
 .about-team {
@@ -204,3 +199,4 @@ body {
   display: flex;
   font-weight: bold;
 }
+

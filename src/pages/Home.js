@@ -22,19 +22,19 @@ export default function Home() {
           <Card.Body>
             <Card.Title className="upcoming">Gear</Card.Title>
             <Card.Text>
-              Gear is available upon request. Extra charge may apply.
+              Gear/Amenities
             </Card.Text>
           </Card.Body>
           <ListGroup className="list-group-flush">
-            <ListGroupItem>Microphones</ListGroupItem>
+            <ListGroupItem>Microphones and Stands</ListGroupItem>
             <ListGroupItem>Monitors and Consoles</ListGroupItem>
             <ListGroupItem>Guitar Pedals</ListGroupItem>
-            <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
-            <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
-            <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
-            <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
-            <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
-            <ListGroupItem>Drums, Guitars, and more</ListGroupItem>
+            <ListGroupItem>Instruments</ListGroupItem>
+            <ListGroupItem>Pro Tools HD12 Logic X Ableton Live 9</ListGroupItem>
+            <ListGroupItem>Avid Mix</ListGroupItem>
+            <ListGroupItem>Avid Control</ListGroupItem>
+            <ListGroupItem>Loft</ListGroupItem>
+            <ListGroupItem>Vocal Booths</ListGroupItem>
           </ListGroup>
         </Card>
         <Card style={{ width: '18rem' }}>
@@ -52,8 +52,10 @@ export default function Home() {
               your project in person.
             </ListGroupItem>
             <ListGroupItem>
-              Book a session or call us at (561)251.7030 / email
-              info@elixair.com.
+            Give us a call and find out why working at Elixair Studios is an experience like no other.
+            </ListGroupItem>
+            <ListGroupItem>
+            Book a session today!
             </ListGroupItem>
           </ListGroup>
         </Card>
@@ -66,15 +68,21 @@ export default function Home() {
             </Card.Text>
           </Card.Body>
           <ListGroup className="list-group-flush">
-            <ListGroupItem>Tand - Guanabanas 8/28/2021</ListGroupItem>
+            <ListGroupItem>Tand @ Guanabanas 8/28/2021</ListGroupItem>
             <ListGroupItem>
-              The Heavy Pets - Key Lime House 12/13/2021
+            Uproot Hootenanny @ The Funky Biscuit 9/7/2021
             </ListGroupItem>
             <ListGroupItem>
-              Umphreys Mcgee - The Fillmore 12/30/2021-1/2/2022
+            Spider Cherry @ Crazy Uncle Mikes 9/8/2021
             </ListGroupItem>
             <ListGroupItem>
-              Umphreys Mcgee - The Fillmore 12/30/2021-1/2/2022
+            The Ricca Project @ Lagniappe 9/29/2021
+            </ListGroupItem>
+            <ListGroupItem>
+              The Heavy Pets -@Key Lime House 12/13/2021
+            </ListGroupItem>
+            <ListGroupItem>
+              Umphreys Mcgee @ The Fillmore 12/30/2021-1/2/2022
             </ListGroupItem>
           </ListGroup>
         </Card>
