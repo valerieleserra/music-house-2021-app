@@ -10,7 +10,7 @@
 /* Navbar */
 .navbar {
   background-color: white;
-  height: 50px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,21 +34,23 @@
   font-weight: bold;
 }
 
-
 body {
   background-color: black;
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
-  border: 25px solid black;
+  border: 20px solid black;
 }
 
 .landing {
   background: url('../src/assets/image1.jpeg') no-repeat center/cover;
   height: auto;
-  position: absolute; top: 0; left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-attachment: fixed;
-  position: relative
+  position: relative;
+  width: 100%;
 }
 
 .landing .overlay {
@@ -106,17 +108,21 @@ body {
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
-
 }
 
 .btn.btn-primary {
   background-color: white !important;
   color: #000;
   outline: none;
-  border-color: white;
-  margin-left: 300px;
-  justify-content: space-evenly;
+  /* border-color: white; */
+  outline: none;
+  color: grey !important;
 }
+
+/* .home-signup{
+  outline: none;
+  color: black !important;
+} */
 
 /* Booking confirmation page */
 .sessionbooked h1 {
@@ -148,6 +154,7 @@ body {
   -webkit-text-stroke: 3px black;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+    width: 100%;
 }
 
 .about-body {
@@ -174,7 +181,6 @@ body {
   display: flex;
   margin-top: 30px;
   padding-bottom: 50px;
-
 }
 
 .team {
@@ -185,17 +191,15 @@ body {
   height: auto;
 }
 
-
 /* Bookings Page */
 
 .noWrap {
   white-space: nowrap;
 }
 
-.all-bkns-title{
+.all-bkns-title {
   align-items: center;
   justify-content: center;
   display: flex;
   font-weight: bold;
 }
-

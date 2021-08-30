@@ -54,11 +54,7 @@ export default function Signup() {
 
   return (
     <>
-      {!user && (
-        <Button  onClick={handleShow}>
-          Sign Up
-        </Button>
-      )}
+      {!user && <Button className="home-signup" onClick={handleShow}>Sign Up</Button>}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Sign Up</Modal.Title>
