@@ -13,8 +13,9 @@ import 'react-bootstrap'
 import firebase from 'firebase'
 import firebaseConfig from './config'
 
-firebase.initializeApp(firebaseConfig)
-const fbAuth = firebase.auth()
+if (!firebase.apps.length){
+  fireabase.initializeApp(firebaseConfig)
+}
 
 export const userContext = createContext(null)
 

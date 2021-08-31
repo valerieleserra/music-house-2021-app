@@ -39,6 +39,9 @@ export default function Signup() {
       .catch((error) => alert(error))
   }
   function signUpAuth(event) {
+    if (!firebase.apps.length){
+      fireabase.initializeApp(firebaseConfig)
+    }
     event.preventDefault()
     firebase
       .auth()

@@ -13,7 +13,11 @@ export default function Login() {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
+
   function loginAuth(e) {
+    if (!firebase.apps.length){
+      fireabase.initializeApp(firebaseConfig)
+    }
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
