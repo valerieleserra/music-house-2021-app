@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import { userContext } from '../App'
 import { Form, Button, Modal } from 'react-bootstrap'
 import firebase from 'firebase'
+import firebaseConfig from '../config'
+import 'firebase/auth' 
 
 export default function Login() {
   const { user, setUser } = useContext(userContext)
@@ -16,7 +18,7 @@ export default function Login() {
 
   function loginAuth(e) {
     if (!firebase.apps.length){
-      fireabase.initializeApp(firebaseConfig)
+      firebase.initializeApp(firebaseConfig)
     }
     firebase
       .auth()

@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from '../src/components/Header'
 import Home from '../src/pages/Home'
@@ -9,12 +9,13 @@ import AboutUs from './pages/AboutUs'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'react-bootstrap'
+import 'firebase/auth' 
 
 import firebase from 'firebase'
 import firebaseConfig from './config'
 
 if (!firebase.apps.length){
-  fireabase.initializeApp(firebaseConfig)
+  firebase.initializeApp(firebaseConfig)
 }
 
 export const userContext = createContext(null)
@@ -23,9 +24,13 @@ export default function App() {
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem('user')) || null
   )
+  const fbUser = firebase.auth().currentUser
+  useEffect(() => {
+    setUser(firebase.auth().currentUser)
+  }, [fbUser])
 
   return (
-    <userContext.Provider value={{ user, setUser, fbAuth, firebase }}>
+    <userContext.Provider value={{ user, setUser}}>
       <Router>
         <Header />
 

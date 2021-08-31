@@ -3,6 +3,8 @@ import { userContext } from '../App'
 import React from 'react'
 import { Button, Modal, Form } from 'react-bootstrap'
 import firebase from 'firebase'
+import firebaseConfig from '../config'
+import 'firebase/auth' 
 
 export default function Signup() {
   const { user, setUser } = useContext(userContext)
@@ -40,7 +42,7 @@ export default function Signup() {
   }
   function signUpAuth(event) {
     if (!firebase.apps.length){
-      fireabase.initializeApp(firebaseConfig)
+      firebase.initializeApp(firebaseConfig)
     }
     event.preventDefault()
     firebase
