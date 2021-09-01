@@ -1,6 +1,6 @@
 # Exlixair Studios
 
-[Live Demo](https://music-house-app-vl.web.app/)
+
 
 # Technolgies Used
 - Firebase/Firestore
